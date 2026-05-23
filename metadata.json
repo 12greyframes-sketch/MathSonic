@@ -1,0 +1,6 @@
+{
+  "name": "Mathsonic",
+  "description": "A speed-based, interactive math calculation game featuring multiple topics, rounds with escalating difficulty, multiple-choice or standard typed input modes, and a clean, wobbly hand-drawn paper aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
