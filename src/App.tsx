@@ -18,7 +18,7 @@ import {
 export default function App() {
   // Game Setup & Options
   const [selectedTopics, setSelectedTopics] = useState<Topic[]>([
-    'addition', 'subtraction', 'squares_cubes_roots'
+    'addition', 'subtraction'
   ]);
   const [answeringMode, setAnsweringMode] = useState<AnsweringMode>('choice');
   const [currentRound, setCurrentRound] = useState<number>(1);
@@ -377,7 +377,10 @@ export default function App() {
     <div id="game-desktop-wrapper" className="min-h-screen px-4 md:px-8 py-6 md:py-12 flex flex-col items-center justify-between">
       
       {/* HEADER SECTION WITH MUTING/SOUND CONTROL */}
-      <header id="app-workspace-header" className="w-full max-w-4xl flex items-center justify-between mb-8 pb-3 border-b-2 border-dashed border-pencil/30">
+      <header 
+        id="app-workspace-header" 
+        className={`w-full max-w-4xl flex items-center justify-between mb-8 pb-3 border-b-2 border-dashed border-pencil/30 ${phase === 'menu' ? 'hidden' : ''}`}
+      >
         <div className="flex items-center gap-2">
           <h1 className="font-heading font-bold text-2xl tracking-tight select-none text-pencil">
             Mathsonic
@@ -410,13 +413,13 @@ export default function App() {
               transition={{ duration: 0.2 }}
               className="w-full space-y-8"
             >
-              <div className="text-center relative py-6">
-                <TapeMark className="absolute -top-1 left-4 hover:scale-105 transition-transform" />
-                <h2 className="font-heading text-6xl md:text-8xl font-bold tracking-tight text-pencil drop-shadow-sm select-none shrink-0 inline-block relative pr-4">
+              <div className="text-center relative py-3">
+                <TapeMark className="absolute -top-1 left-4 hover:scale-105 transition-transform scale-75" />
+                <h2 className="font-heading text-3xl md:text-4xl font-bold tracking-tight text-pencil drop-shadow-sm select-none shrink-0 inline-block relative pr-2">
                   Math<span className="text-marker">sonic</span>
-                  <span className="absolute -top-6 -right-5 md:-top-8 md:-right-6 text-marker text-4xl transform rotate-12 animate-pulse">⚡</span>
+                  <span className="absolute -top-3 -right-2 md:-top-4 md:-right-3 text-marker text-2xl transform rotate-12 animate-pulse">⚡</span>
                 </h2>
-                <ScribbleLine className="mt-4 max-w-md mx-auto opacity-70" />
+                <ScribbleLine className="mt-2 max-w-[224px] mx-auto opacity-70" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
