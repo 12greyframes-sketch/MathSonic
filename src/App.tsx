@@ -1031,12 +1031,6 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      {/* FOOTER DESK SECTION */}
-      <footer id="sketch-math-footer" className="w-full max-w-4xl mt-12 pt-6 border-t border-dashed border-pencil/20 text-center text-sm font-sans text-pencil/40 select-none">
-        <p>🖊️ Scribbled with Google AI Studio • Kalam & Patrick Hand Typography Pairings</p>
-        <p className="mt-1 font-mono text-[11px]">UTC CLI Clock: 2026-05-23 • Zero Straight Lines Constraint Enabled</p>
-      </footer>
-
     </div>
   );
 }
